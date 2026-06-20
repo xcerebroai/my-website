@@ -87,13 +87,13 @@ export default function Products() {
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PRODUCTS.map((product, i) => (
             <Reveal key={product.name} delay={i * 0.08}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_1px_3px_rgba(11,46,99,0.04),0_12px_28px_-14px_rgba(11,46,99,0.12)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_1px_3px_rgba(11,46,99,0.05),0_24px_44px_-16px_rgba(11,46,99,0.22)]">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_1px_3px_rgba(11,46,99,0.04),0_12px_28px_-14px_rgba(11,46,99,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_1px_3px_rgba(11,46,99,0.05),0_24px_44px_-16px_rgba(11,46,99,0.20)]">
                 {/* Thumbnail */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-navy">
                   <ImageWithFallback
                     src={product.image}
                     alt={product.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/5 to-transparent" />
                   <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 font-heading text-[11px] font-semibold uppercase tracking-wide text-navy shadow-sm backdrop-blur">
@@ -106,7 +106,7 @@ export default function Products() {
                   <div className="absolute -top-6 right-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gold text-navy shadow-lg ring-4 ring-white transition-colors duration-300 group-hover:bg-darkgold">
                     <product.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-1 pr-12 font-heading text-lg font-bold leading-snug text-navy">
+                  <h3 className="mt-1 pr-12 font-heading text-lg font-bold leading-snug tracking-tight text-navy">
                     {product.name}
                   </h3>
                   <p className="mt-2.5 flex-1 font-body text-sm leading-relaxed text-charcoal/70">

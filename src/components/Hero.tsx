@@ -78,7 +78,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mt-6 font-heading text-[2.6rem] font-bold leading-[1.07] tracking-[-0.01em] text-white sm:text-5xl lg:text-6xl"
+            className="mt-6 font-heading text-[2.6rem] font-bold leading-[1.06] tracking-[-0.02em] text-white sm:text-5xl lg:text-6xl"
           >
             Recover Money.
             <br />
@@ -114,7 +114,7 @@ export default function Hero() {
             </a>
             <a
               href="#products"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/20 bg-royal/90 px-7 py-3.5 font-heading text-base font-semibold text-white shadow-lg shadow-royal/20 backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-royal"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/25 bg-white/[0.06] px-7 py-3.5 font-heading text-base font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:border-white/45 hover:bg-white/[0.12]"
             >
               View Training
             </a>
@@ -127,10 +127,10 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="show"
-          className="mt-14 flex max-w-2xl flex-wrap gap-x-10 gap-y-6 border-t border-white/12 pt-7 sm:gap-x-14"
+          className="mt-14 grid max-w-2xl grid-cols-3 divide-x divide-white/10 border-t border-white/12 pt-7"
         >
           {TRUST_STATS.map((stat) => (
-            <div key={stat.label} className="flex flex-col">
+            <div key={stat.label} className="flex flex-col px-3 first:pl-0 sm:px-5">
               <div className="font-heading text-2xl font-bold text-white sm:text-3xl">
                 {stat.value}{' '}
                 <span className="text-base font-semibold text-gold sm:text-lg">{stat.suffix}</span>

@@ -32,8 +32,8 @@ export default function FinalCTA() {
           </span>
         </Reveal>
         <Reveal delay={0.05}>
-          <h2 className="mt-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl">
-            Ready to Start?
+          <h2 className="mt-6 text-balance font-heading text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl">
+            Ready to reclaim what's yours?
           </h2>
         </Reveal>
         <Reveal delay={0.1}>

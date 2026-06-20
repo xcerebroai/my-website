@@ -62,12 +62,12 @@ export default function Founder() {
           {/* Bio */}
           <div>
             <Reveal>
-              <span className="font-heading text-xs font-semibold uppercase tracking-[0.18em] text-royal">
+              <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-royal">
                 Meet the Founder
               </span>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-4 font-heading text-3xl font-bold text-navy sm:text-4xl">
+              <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl lg:text-[2.75rem]">
                 Jeffrey Richman
               </h2>
             </Reveal>

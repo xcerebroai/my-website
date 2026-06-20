@@ -104,11 +104,11 @@ export function SectionHeading({
 }) {
   const alignCls = align === 'center' ? 'items-center text-center' : 'items-start text-left'
   return (
-    <div className={`flex flex-col ${alignCls} gap-4`}>
+    <div className={`flex flex-col ${alignCls}`}>
       {eyebrow && (
         <Reveal>
           <span
-            className={`font-heading text-xs font-semibold uppercase tracking-[0.18em] ${
+            className={`font-heading text-xs font-semibold uppercase tracking-[0.2em] ${
               light ? 'text-gold' : 'text-royal'
             }`}
           >
@@ -116,23 +116,23 @@ export function SectionHeading({
           </span>
         </Reveal>
       )}
-      <Reveal delay={0.05}>
+      <Reveal delay={0.05} className="mt-4">
         <h2
-          className={`font-heading text-3xl font-bold leading-tight sm:text-4xl ${
+          className={`max-w-3xl text-balance font-heading text-[2rem] font-bold leading-[1.12] tracking-tight sm:text-4xl lg:text-[2.75rem] ${
             light ? 'text-white' : 'text-navy'
           }`}
         >
           {title}
         </h2>
       </Reveal>
-      <Reveal delay={0.1}>
+      <Reveal delay={0.1} className="mt-5">
         <div className={`gold-rule ${align === 'center' ? 'mx-auto' : ''}`} />
       </Reveal>
       {intro && (
-        <Reveal delay={0.15}>
+        <Reveal delay={0.15} className="mt-6 max-w-2xl">
           <p
-            className={`max-w-2xl text-base leading-relaxed sm:text-lg ${
-              light ? 'text-slate-300' : 'text-charcoal/75'
+            className={`text-pretty font-body text-base leading-relaxed sm:text-[1.0625rem] ${
+              light ? 'text-slate-300' : 'text-charcoal/70'
             }`}
           >
             {intro}

@@ -46,7 +46,7 @@ export default function Navbar() {
         scrolled ? 'shadow-lg shadow-navy/20' : ''
       }`}
     >
-      <nav className="bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/85">
+      <nav className="border-b border-white/10 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/85">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
           <BrandMark />
 

@@ -49,7 +49,7 @@ export default function Testimonials() {
         <SectionHeading
           eyebrow="Proven Results"
           title="Trusted by Students, Clients & Professionals"
-          intro="Real people recovering real money. [Placeholder testimonials — swap in your own success stories.]"
+          intro="Real people, real recoveries — from first-time claimants to seasoned professionals. [Swap in your own success stories.]"
         />
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">

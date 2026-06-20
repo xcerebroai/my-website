@@ -44,19 +44,21 @@ export default function Pillars() {
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="A Complete System"
-          title="Three Pillars of Recovery Success"
-          intro="Education, coaching, and technology — engineered to work together so you can move from learning to results with confidence."
+          title="Three Pillars of Recovery"
+          intro="Education, coaching, and technology — built to work together, so you move from learning to results without guesswork."
         />
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {PILLARS.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 0.1}>
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-8 shadow-[0_1px_3px_rgba(11,46,99,0.04),0_12px_28px_-12px_rgba(11,46,99,0.10)] transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-[0_1px_3px_rgba(11,46,99,0.05),0_24px_44px_-16px_rgba(11,46,99,0.22)]">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-8 shadow-[0_1px_3px_rgba(11,46,99,0.04),0_12px_28px_-12px_rgba(11,46,99,0.10)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[0_1px_3px_rgba(11,46,99,0.05),0_24px_44px_-16px_rgba(11,46,99,0.20)]">
                 <span className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-gradient-to-r from-gold to-darkgold transition-transform duration-300 group-hover:scale-x-100" />
                 <div className="bg-navy-depth flex h-14 w-14 items-center justify-center rounded-xl text-gold shadow-md transition-colors duration-300 group-hover:text-white">
                   <pillar.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 font-heading text-xl font-bold text-navy">{pillar.title}</h3>
+                <h3 className="mt-6 font-heading text-xl font-bold tracking-tight text-navy">
+                  {pillar.title}
+                </h3>
                 <p className="mt-3 font-body text-sm leading-relaxed text-charcoal/75">
                   {pillar.blurb}
                 </p>

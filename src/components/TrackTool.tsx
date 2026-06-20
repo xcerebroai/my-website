@@ -22,13 +22,12 @@ export default function TrackTool() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full bg-royal/10 px-3 py-1 font-heading text-xs font-semibold uppercase tracking-[0.16em] text-royal">
-                <ChipIcon className="h-4 w-4" />
+              <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-royal">
                 The Platform
               </span>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="mt-5 font-heading text-3xl font-bold text-navy sm:text-4xl">
+              <h2 className="mt-4 max-w-md text-balance font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">
                 TrackTool — Your Recovery Command Center
               </h2>
             </Reveal>
