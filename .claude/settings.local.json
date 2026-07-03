@@ -14,7 +14,16 @@
       "Bash(git init *)",
       "Bash(git add *)",
       "Bash(git -c user.name=\"SurplusFunds\" -c user.email=\"infinitygauntletllc@gmail.com\" commit -q -m \"Initial commit: SurplusFunds.com landing page \\(Vite + React + Tailwind + Motion\\)\")",
-      "Bash(git branch *)"
+      "Bash(git branch *)",
+      "Bash(netstat -ano)",
+      "Bash(gh auth *)",
+      "Bash(echo \"---EXIT:$?---\")",
+      "Bash(ls -la \"/c/Users/Alexia/Downloads\" | grep -iE \"index.html|projects.json|README.md\"; echo \"---\"; ls \"/c/Users/Alexia/Downloads/index.html\" \"/c/Users/Alexia/Downloads/projects.json\" \"/c/Users/Alexia/Downloads/README.md\" 2>&1)",
+      "PowerShell($g = Get-Command gh -ErrorAction SilentlyContinue; if \\($g\\) { \"FOUND: \" + $g.Source; gh --version } else { \"GH_NOT_INSTALLED\" })",
+      "PowerShell($p = \"$env:ProgramFiles\\\\GitHub CLI\\\\gh.exe\"; if \\(Test-Path $p\\) { \"INSTALLED at: $p\"; & $p --version } else { \"NOT FOUND\" })",
+      "PowerShell($env:Path += \";$env:ProgramFiles\\\\GitHub CLI\"; gh auth status)",
+      "PowerShell($env:Path += \";$env:ProgramFiles\\\\GitHub CLI\"; gh auth status; \"===USER===\"; gh api user --jq '.login')",
+      "PowerShell($node = \\(Get-Command node -ErrorAction SilentlyContinue\\); $py = \\(Get-Command python -ErrorAction SilentlyContinue\\); \"node: \" + $\\(if\\($node\\){$node.Source}else{\"no\"}\\); \"python: \" + $\\(if\\($py\\){$py.Source}else{\"no\"}\\))"
     ]
   }
 }
