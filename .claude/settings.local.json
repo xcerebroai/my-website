@@ -23,7 +23,9 @@
       "PowerShell($p = \"$env:ProgramFiles\\\\GitHub CLI\\\\gh.exe\"; if \\(Test-Path $p\\) { \"INSTALLED at: $p\"; & $p --version } else { \"NOT FOUND\" })",
       "PowerShell($env:Path += \";$env:ProgramFiles\\\\GitHub CLI\"; gh auth status)",
       "PowerShell($env:Path += \";$env:ProgramFiles\\\\GitHub CLI\"; gh auth status; \"===USER===\"; gh api user --jq '.login')",
-      "PowerShell($node = \\(Get-Command node -ErrorAction SilentlyContinue\\); $py = \\(Get-Command python -ErrorAction SilentlyContinue\\); \"node: \" + $\\(if\\($node\\){$node.Source}else{\"no\"}\\); \"python: \" + $\\(if\\($py\\){$py.Source}else{\"no\"}\\))"
+      "PowerShell($node = \\(Get-Command node -ErrorAction SilentlyContinue\\); $py = \\(Get-Command python -ErrorAction SilentlyContinue\\); \"node: \" + $\\(if\\($node\\){$node.Source}else{\"no\"}\\); \"python: \" + $\\(if\\($py\\){$py.Source}else{\"no\"}\\))",
+      "Bash(echo \"=== zip anywhere in Downloads \\(case-insensitive\\) ===\"; ls -la ~/Downloads/ | grep -i -E \"jarvis|master-package|field-runbook|runbook\" 2>&1; echo \"=== broader search ===\"; find ~/Downloads ~/Desktop -maxdepth 2 -iname \"*jarvis*\" -o -iname \"*field-runbook*\" -o -iname \"*master-package*\" 2>/dev/null)",
+      "Bash(unzip -l ~/Downloads/JARVIS-MASTER-PACKAGE.zip)"
     ]
   }
 }
