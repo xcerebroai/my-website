@@ -95,22 +95,27 @@ export function SectionHeading({
   intro,
   align = 'center',
   light = false,
+  accent = 'gold',
 }: {
   eyebrow?: string
   title: ReactNode
   intro?: ReactNode
   align?: 'center' | 'left'
   light?: boolean
+  /** Accent color for the eyebrow + rule. 'gold' = SurplusFunds site,
+   *  'electric' = X Cerebro AI bootcamp page. */
+  accent?: 'gold' | 'electric'
 }) {
   const alignCls = align === 'center' ? 'items-center text-center' : 'items-start text-left'
+  const eyebrowColor =
+    accent === 'electric' ? 'text-electric' : light ? 'text-gold' : 'text-royal'
+  const ruleClass = accent === 'electric' ? 'electric-rule' : 'gold-rule'
   return (
     <div className={`flex flex-col ${alignCls}`}>
       {eyebrow && (
         <Reveal>
           <span
-            className={`font-heading text-xs font-semibold uppercase tracking-[0.2em] ${
-              light ? 'text-gold' : 'text-royal'
-            }`}
+            className={`font-heading text-xs font-semibold uppercase tracking-[0.2em] ${eyebrowColor}`}
           >
             {eyebrow}
           </span>
@@ -126,7 +131,7 @@ export function SectionHeading({
         </h2>
       </Reveal>
       <Reveal delay={0.1} className="mt-5">
-        <div className={`gold-rule ${align === 'center' ? 'mx-auto' : ''}`} />
+        <div className={`${ruleClass} ${align === 'center' ? 'mx-auto' : ''}`} />
       </Reveal>
       {intro && (
         <Reveal delay={0.15} className="mt-6 max-w-2xl">

@@ -1,6 +1,10 @@
-name: Deploy to GitHub Pages
+name: Deploy First to Deal Challenge to GitHub Pages
 
-# Builds the Vite site and publishes /dist to GitHub Pages on every push to main.
+# Publishes the self-contained First to Deal Challenge page as the Pages ROOT
+# (index.html) on every push to main. SurplusFunds is a separate project and is
+# NOT deployed here. The single-file build inlines all CSS/JS, so there are no
+# base-path issues, and the opt-in form posts to your GoHighLevel webhook
+# straight from the browser (no server needed).
 on:
   push:
     branches: [main]
@@ -26,10 +30,16 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
+      - name: Build self-contained challenge page
+        run: npm run build:matrix
+      - name: Stage site (challenge page as the root index.html)
+        run: |
+          mkdir -p _site
+          cp dist-challenge/challenge.html _site/index.html
+          cp dist-challenge/challenge.html _site/challenge.html
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build
